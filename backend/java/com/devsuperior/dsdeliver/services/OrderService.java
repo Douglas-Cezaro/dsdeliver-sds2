@@ -21,7 +21,7 @@ public class OrderService {
 
 	@Autowired
 	private OrderRepository repository;
-	
+
 	@Autowired
 	private ProductRepository productRepository;
 
@@ -33,24 +33,35 @@ public class OrderService {
 		return list.stream().map(x -> new OrderDTO(x)).collect(Collectors.toList());
 
 	}
-	
+
 	@Transactional
 	public OrderDTO insert(OrderDTO dto) {
-		
-		//Instanciando um order
-		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLatitude(), 
-				Instant.now(), OrderStatus.PENDING);
-		
-		// Fazer um for com os produtos que vieram do dto, e adicionar a referencia no order_products
-		for(ProductDTO p: dto.getProducts()) {
+
+		// Instanciando um order
+		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLatitude(), Instant.now(),
+				OrderStatus.PENDING);
+
+		// Fazer um for com os produtos que vieram do dto, e adicionar a referencia no
+		// order_products
+		for (ProductDTO p : dto.getProducts()) {
 			Product product = productRepository.getOne(p.getId());
 			order.getProducts().add(product);
 		}
-		
+
 		order = repository.save(order);
-		
+
 		return new OrderDTO(order);
-		
+
+	}
+
+	@Transactional
+	public OrderDTO setDelivered(Long id) {
+
+		Order order = repository.getOne(id);
+		order.setStatus(OrderStatus.DELIVERED);
+		order = repository.save(order);
+
+		return new OrderDTO(order);
 	}
 
 }
