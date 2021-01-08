@@ -1,0 +1,8 @@
+Configurar projeto para implantação no heroku
+
+criar arquivo na raiz do projeto
+
+system.properties
+
+colocar dentro dele
+java.runtime.version=11 (versão do java)
