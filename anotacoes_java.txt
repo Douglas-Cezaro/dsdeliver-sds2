@@ -6,3 +6,10 @@ system.properties
 
 colocar dentro dele
 java.runtime.version=11 (versão do java)
+
+
+Implantar projeto no Heroku
+Criar app e provisionar Postgres
+Criar base de dados remota
+pegar variavel de conexão no settings
+Executar comandos no Heroku CLI
