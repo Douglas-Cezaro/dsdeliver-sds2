@@ -13,3 +13,10 @@ Criar app e provisionar Postgres
 Criar base de dados remota
 pegar variavel de conexão no settings
 Executar comandos no Heroku CLI
+heroku login
+heroku git:remote -a <nome-do-app>
+git remote -v
+git subtree push --prefix backend heroku main
+
+Erros para buidl heroku 
+/mvnw -U clean install 
