@@ -20,3 +20,5 @@ git subtree push --prefix backend heroku main
 
 Erros para buidl heroku 
 /mvnw -U clean install 
+
+dar commit novamente para dar certo
