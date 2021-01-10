@@ -18,7 +18,7 @@
 
 Projeto desenvolvido durante a semana [**DevSuperior 2.0**](https://devsuperior.com.br/).
 
-O **DsDeviler** consiste em uma aplicação para registro e entregas de pedidos. Seu real intuito é praticar linguagens de programação que possibilitem que o programador se prepare para ser fullstack. Tendo seu backend em Java utilizando o **Spring Boot 4**, seu frontend web em **REACT** e mobile em **REACT-NATIVE**. Backend publicado no [**HEROKU**](https://douglas-dsdeliver.herokuapp.com/) e frontend web publicado na [**NETLIFY**](https://douglas-cezaro-sds2.netlify.app/).
+O **DsDeviler** consiste em uma aplicação para registro e entregas de pedidos. Seu real intuito é praticar linguagens de programação que possibilitem que o programador se prepare para ser fullstack. Tendo seu backend em Java utilizando o **Spring Boot 4**, seu frontend web em **REACT** e mobile em **REACT-NATIVE** utilizando o [**EXPO**](https://snack.expo.io/@negritoprogramador/dsdeliver). Backend publicado no [**HEROKU**](https://douglas-dsdeliver.herokuapp.com/) e frontend web publicado na [**NETLIFY**](https://douglas-cezaro-sds2.netlify.app/).
 
 # Tecnologias utilizadas 🧰
 
