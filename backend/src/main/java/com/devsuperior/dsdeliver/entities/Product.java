@@ -8,18 +8,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_product")
 public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Schema(description = "Identificador produto", example = "1", required = true)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Schema(description = "Nome do produto", example = "Macarrão", required = true)
 	private String name;
+	@Schema(description = "Preço do produto", example = "2.90", required = true, format = "number")
 	private Double price;
+	@Schema(description = "Descrição do produto", example = "Macarrão fusili com toque do chef e especiarias.", required = true)
 	private String description;
+	@Schema(description = "Link com imagem do produto", example = "https://raw.githubusercontent.com/devsuperior/sds2/master/assets/risoto_funghi.jpg", required = true)
 	private String imageUri;
 
 	public Product() {

@@ -14,6 +14,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_order")
 public class Order implements Serializable {
@@ -22,17 +24,20 @@ public class Order implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long Id;
+	@Schema(description = "Endereço entrega", example = "Dois Vizinhos PR", required = true)
 	private String address;
+	@Schema(description = "Latitude do endereço de entrega", example = "-25.7529212", required = true, format = "number")
 	private Double latitude;
+	@Schema(description = "Longitude do endereço de entrega", example = "-53.0579292", required = true, format = "number")
 	private Double longitude;
 	private Instant moment;
 	private OrderStatus status;
 
+	@Schema(description = "Produtos que vão compor o pedido")
 	@ManyToMany
-	@JoinTable(name = "tb_order_product", 
-		joinColumns = @JoinColumn(name = "order_id"), 
-		inverseJoinColumns = @JoinColumn(name = "product_id"))
+	@JoinTable(name = "tb_order_product", joinColumns = @JoinColumn(name = "order_id"), inverseJoinColumns = @JoinColumn(name = "product_id"))
 	private Set<Product> products = new HashSet<>();
 
 	public Order() {
@@ -104,8 +109,7 @@ public class Order implements Serializable {
 		}
 		return sum;
 	}
-	
-	
+
 	public Set<Product> getProducts() {
 		return products;
 	}
