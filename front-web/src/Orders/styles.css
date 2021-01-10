@@ -204,7 +204,7 @@
 
 .amount-selected-container {
   font-weight: normal;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 15px;
   letter-spacing: -0.015em;
   display: block;
@@ -213,7 +213,7 @@
 
 .amount-selected {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 15px;
   letter-spacing: -0.015em;
   margin-right: 5px;
@@ -221,7 +221,7 @@
 
 .order-summary-total {
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 15px;
   letter-spacing: -0.015em;
   color: #fff;
