@@ -20,7 +20,7 @@ export default function Home() {
               FAZER PEDIDO
             </Link>
           </div>
-          <div className="home-img">
+          <div className="home-image">
             <MainImage />
           </div>
         </div>
